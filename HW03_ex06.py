@@ -85,8 +85,12 @@ def is_palindrome(s):
 # When you submit only include your final function: is_power
 
 def is_power(a, b):
-    if a % b == 0:
+    #Using recursion to check the argument until it fits the 
+    #first condition
+    if a == b or a == 1:
         return True
+    elif a % b == 0:
+        return is_power(a/b, b)
     else:
         return False
 
